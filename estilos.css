@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+	background: linear-gradient(135deg, #7c5f9a 50%, #77c36b 50%);
+	color: white;
+	font-family: 'Share Tech Mono', monospace;
+	height:100vh;
+    display: flex;
+}
+
+.container{
+	display: grid;
+	grid-template-columns:  4fr 6fr;
+	grid-template-rows:  auto auto auto;
+    margin: auto;
+    max-width: 1200px;
+}
+
+.container .container_text{
+    grid-row: 2/3;
+    padding: 20px;
+}
+
+.container .container_text h3{
+    font-size: 60px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.image_text{
+    align-self: center;
+    grid-column: 2 / 3;
+    grid-row: 2/3;
+    text-align: center;
+    word-break: break-all;
+}
+
+.image_text h1{
+    color: rgba(255, 255, 255, .5);
+    font-size: 200px;
+    margin: 0;
+}
+
+.image{
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+    text-align: center;
+}
+
+.image img{
+	width: 100%;
+    max-width: 650px;
+}
+
+
+
+@media screen and (max-width:1120px){
+    .image_text h1{
+        font-size: 17.85vw;
+    }    
+}
+
+@media screen and (max-width:940px){
+    .container{
+        grid-template-columns:  1fr;
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .image_text h1{
+        font-size: 200px;
+    }
+
+    .container .container_text{
+        grid-row: 4/5;
+        grid-column: 1/2;
+    }
+
+    .image_text{
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+    
+    .image{
+        grid-row: 1 / 4;
+        grid-column: 1/2;
+    }
+}
+
+@media screen and (max-width:690px){
+    .image_text h1{
+        font-size: 28vw;
+    }    
+}
